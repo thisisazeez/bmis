@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals Demo - BMIS 263 Week 9</title>
+</head>
+<body>
+
+    <h1>Conditional Statements Demo</h1>
+    <p>Open the console (F12) to see all output.</p>
+
+    <script>
+        // ============================================
+        // EXAMPLE 1: Simple if/else
+        // ============================================
+
+        let temperature = 35;
+
+        if (temperature > 30) {
+            console.log("It is hot outside.");
+        } else {
+            console.log("The temperature is moderate or cool.");
+        }
+
+        // ============================================
+        // EXAMPLE 2: if / else if / else (multiple branches)
+        // ============================================
+
+        let hour = 14;    // 2:00 PM in 24-hour format
+
+        if (hour < 12) {
+            console.log("Good morning!");
+        } else if (hour < 17) {
+            console.log("Good afternoon!");
+        } else if (hour < 21) {
+            console.log("Good evening!");
+        } else {
+            console.log("Good night!");
+        }
+
+        // ============================================
+        // EXAMPLE 3: Comparison operators
+        // ============================================
+
+        console.log("--- Comparison Operators ---");
+        console.log("5 === 5:", 5 === 5);         // true
+        console.log("5 === '5':", 5 === "5");     // false (strict: different types)
+        console.log("5 == '5':", 5 == "5");       // true  (loose: type conversion)
+        console.log("10 > 5:", 10 > 5);           // true
+        console.log("3 >= 3:", 3 >= 3);           // true
+        console.log("7 !== 7:", 7 !== 7);         // false
+
+        // ============================================
+        // EXAMPLE 4: Logical operators
+        // ============================================
+
+        let age = 25;
+        let hasID = true;
+        let isBanned = false;
+
+        console.log("--- Logical Operators ---");
+
+        // AND: both must be true
+        if (age >= 18 && hasID) {
+            console.log("AND: Access granted (age OK and has ID).");
+        }
+
+        // OR: at least one must be true
+        if (age < 18 || !hasID) {
+            console.log("OR: Access issue.");
+        } else {
+            console.log("OR: No access issues.");
+        }
+
+        // NOT: reverses boolean
+        if (!isBanned) {
+            console.log("NOT: User is not banned.");
+        }
+
+        // Combined
+        if (age >= 18 && hasID && !isBanned) {
+            console.log("COMBINED: Full access granted.");
+        }
+
+        // ============================================
+        // EXAMPLE 5: Pass/Fail with user input
+        // ============================================
+
+        let score = parseFloat(prompt("Enter a test score (0-100):"));
+
+        if (isNaN(score)) {
+            alert("Invalid input -- not a number.");
+        } else if (score < 0 || score > 100) {
+            alert("Score out of range. Must be 0-100.");
+        } else if (score >= 50) {
+            alert(`Score: ${score} -- PASS`);
+        } else {
+            alert(`Score: ${score} -- FAIL`);
+        }
+
+        // ============================================
+        // EXAMPLE 6: Truthy and falsy values
+        // ============================================
+
+        console.log("--- Truthy / Falsy ---");
+
+        let emptyString = "";
+        let nonEmptyString = "hello";
+        let zero = 0;
+        let nonZero = 42;
+
+        if (emptyString) {
+            console.log("Empty string is truthy");
+        } else {
+            console.log("Empty string is FALSY");    // this runs
+        }
+
+        if (nonEmptyString) {
+            console.log("Non-empty string is TRUTHY");  // this runs
+        }
+
+        if (zero) {
+            console.log("Zero is truthy");
+        } else {
+            console.log("Zero is FALSY");    // this runs
+        }
+
+        if (nonZero) {
+            console.log("Non-zero number is TRUTHY");  // this runs
+        }
+    </script>
+
+</body>
+</html>

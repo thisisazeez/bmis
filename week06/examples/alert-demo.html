@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics - BMIS 263 Week 6</title>
+</head>
+<body>
+
+    <h1>JavaScript Output Methods</h1>
+    <p>This page demonstrates the three output methods covered in Week 6.</p>
+
+    <hr>
+
+    <h2>1. alert()</h2>
+    <p>An alert box appeared when this page loaded. It paused everything until you clicked OK.</p>
+
+    <h2>2. console.log()</h2>
+    <p>Open the browser console (press F12, then click the Console tab) to see the messages printed there.</p>
+
+    <h2>3. document.write()</h2>
+    <p>The line below was generated entirely by JavaScript:</p>
+
+    <script>
+        // ---- 1. alert() ----
+        // This popup appears immediately when the page loads.
+        // The page waits until the user clicks OK.
+        alert("This is an alert box. Click OK to continue.");
+
+        // ---- 2. console.log() ----
+        // These messages appear only in the developer console (F12).
+        // The user does not see them on the page.
+        console.log("Hello from console.log()!");
+        console.log("This is a string:", "Hello");
+        console.log("This is a number:", 42);
+        console.log("You can print multiple values separated by commas.");
+
+        // ---- 3. document.write() ----
+        // This writes HTML content directly into the page.
+        // Use sparingly -- calling document.write() after the page finishes
+        // loading will erase the entire page.
+        document.write("<p><strong>This paragraph was created by document.write().</strong></p>");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* Week 5 Example - Layout CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: #16213e;
+    padding: 10px;
+}
+
+nav a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Demo sections */
+.demo-section {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.demo-section h2 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e94560;
+    padding-bottom: 8px;
+}
+
+.demo-section h3 {
+    color: #555;
+    font-size: 14px;
+    margin: 15px 0 8px 0;
+}
+
+/* Box model demo */
+.box-demo {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.box {
+    background-color: #dfe6e9;
+    border: 2px solid #2d3436;
+    text-align: center;
+    font-size: 12px;
+}
+
+#box1 {
+    padding: 10px;
+    margin: 10px;
+}
+
+#box2 {
+    padding: 30px;
+    margin: 10px;
+}
+
+#box3 {
+    padding: 10px;
+    margin: 30px;
+    border-width: 5px;
+}
+
+.note {
+    font-style: italic;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Flexbox demo */
+.flex-demo {
+    display: flex;
+    gap: 10px;
+    background-color: #dfe6e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flex-item {
+    background-color: #e94560;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Card layout */
+.card-container {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card h3 {
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a2e;
+    color: #888;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
