@@ -1,0 +1,101 @@
+/* ================================================
+   BMIS 263 - Week 4 Example Stylesheet
+   Demonstrates: selectors, properties, colours,
+   text styling, borders, spacing
+   ================================================ */
+
+/* ---- Page defaults ---- */
+body {
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+/* ---- Headings ---- */
+
+/* Element selector: styles ALL h1 elements */
+h1 {
+    color: #1a1a2e;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Element selector: styles ALL h2 elements */
+h2 {
+    color: #16213e;
+    font-size: 22px;
+    border-bottom: 2px solid #e94560;
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+/* ---- Paragraphs ---- */
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+/* ---- Class selectors ---- */
+
+/* .highlight: makes text stand out */
+.highlight {
+    background-color: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* .card: a container with a border and padding */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+/* ---- ID selector ---- */
+
+/* #main-title: styles the one main heading on the page */
+#main-title {
+    color: #e94560;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+/* ---- Images ---- */
+img {
+    border: 3px solid #16213e;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- Links ---- */
+a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect: underline appears when the mouse hovers over a link */
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Lists ---- */
+ul, ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}

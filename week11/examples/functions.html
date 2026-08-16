@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Demo - BMIS 263 Week 11</title>
+</head>
+<body>
+
+    <h1>Functions Demo</h1>
+    <p>Open the console (F12) to see all output.</p>
+
+    <script>
+        // ============================================
+        // BASIC FUNCTION: no parameters, no return
+        // ============================================
+
+        function sayHello() {
+            console.log("Hello from a function!");
+        }
+
+        sayHello();
+        sayHello();   // reusable: call it as many times as you want
+
+        // ============================================
+        // FUNCTION WITH PARAMETERS
+        // ============================================
+
+        function greetPerson(name) {
+            console.log(`Welcome, ${name}!`);
+        }
+
+        greetPerson("Adamu");
+        greetPerson("Fatima");
+
+        // Multiple parameters
+        function introduce(name, age, course) {
+            console.log(`I am ${name}, ${age} years old, studying ${course}.`);
+        }
+
+        introduce("Ibrahim", 22, "BMIS 263");
+
+        // ============================================
+        // FUNCTION WITH RETURN VALUE
+        // ============================================
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        // The returned value can be stored in a variable
+        let sum = add(10, 20);
+        console.log("Sum:", sum);
+
+        // Or used directly in an expression
+        console.log("Double sum:", add(10, 20) * 2);
+
+        // ============================================
+        // SCOPE DEMONSTRATION
+        // ============================================
+
+        let globalMessage = "I am global";
+
+        function testScope() {
+            let localMessage = "I am local";
+            console.log(globalMessage);    // works -- global is accessible
+            console.log(localMessage);     // works -- local is accessible inside the function
+        }
+
+        testScope();
+        console.log(globalMessage);    // works -- global is accessible
+        // console.log(localMessage);  // ERROR -- local variable does not exist here
+
+        // ============================================
+        // PRACTICAL: Building a program with functions
+        // ============================================
+
+        function calculateArea(length, width) {
+            return length * width;
+        }
+
+        function calculatePerimeter(length, width) {
+            return 2 * (length + width);
+        }
+
+        function displayRectangleInfo(length, width) {
+            let area = calculateArea(length, width);
+            let perimeter = calculatePerimeter(length, width);
+            console.log(`Rectangle: ${length} x ${width}`);
+            console.log(`  Area: ${area}`);
+            console.log(`  Perimeter: ${perimeter}`);
+        }
+
+        // Each function has one job. The main code reads clearly.
+        displayRectangleInfo(5, 3);
+        displayRectangleInfo(10, 7);
+        displayRectangleInfo(4, 4);
+    </script>
+
+</body>
+</html>
