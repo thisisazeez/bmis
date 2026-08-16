@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Demo - BMIS 263 Week 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .demo {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 8px 14px;
+            margin: 3px;
+            cursor: pointer;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background: #eee;
+        }
+        button:hover { background: #ddd; }
+        #hover-zone {
+            width: 100%;
+            height: 60px;
+            background-color: #eee;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+        input {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Events Demo</h1>
+
+    <!-- Click event -->
+    <div class="demo">
+        <h2>Click Event</h2>
+        <button id="click-demo">Click Me</button>
+        <p id="click-result">Waiting for click...</p>
+    </div>
+
+    <!-- Mouse events -->
+    <div class="demo">
+        <h2>Mouse Enter / Leave</h2>
+        <div id="hover-zone">Hover over me</div>
+    </div>
+
+    <!-- Keyboard events -->
+    <div class="demo">
+        <h2>Keyboard Event</h2>
+        <input type="text" id="key-input" placeholder="Press any key...">
+        <p id="key-result">Last key pressed: none</p>
+    </div>
+
+    <!-- Real-time input -->
+    <div class="demo">
+        <h2>Real-time Input Mirror</h2>
+        <input type="text" id="mirror-input" placeholder="Type something...">
+        <p id="mirror-output" style="font-size: 24px; color: #333;"></p>
+    </div>
+
+    <script>
+        // ---- Click event ----
+        let clickBtn = document.getElementById("click-demo");
+        let clickCount = 0;
+
+        clickBtn.addEventListener("click", function() {
+            clickCount++;
+            document.getElementById("click-result").textContent =
+                `Button clicked ${clickCount} time(s).`;
+        });
+
+        // ---- Mouse enter and leave ----
+        let hoverZone = document.getElementById("hover-zone");
+
+        hoverZone.addEventListener("mouseenter", function() {
+            hoverZone.style.backgroundColor = "#3498db";
+            hoverZone.style.color = "white";
+            hoverZone.style.borderStyle = "solid";
+            hoverZone.textContent = "Mouse is inside!";
+        });
+
+        hoverZone.addEventListener("mouseleave", function() {
+            hoverZone.style.backgroundColor = "#eee";
+            hoverZone.style.color = "#333";
+            hoverZone.style.borderStyle = "dashed";
+            hoverZone.textContent = "Hover over me";
+        });
+
+        // ---- Keyboard event ----
+        let keyInput = document.getElementById("key-input");
+
+        keyInput.addEventListener("keydown", function(event) {
+            document.getElementById("key-result").textContent =
+                `Last key pressed: ${event.key} (code: ${event.code})`;
+        });
+
+        // ---- Real-time input mirror ----
+        let mirrorInput = document.getElementById("mirror-input");
+        let mirrorOutput = document.getElementById("mirror-output");
+
+        mirrorInput.addEventListener("input", function() {
+            mirrorOutput.textContent = mirrorInput.value;
+        });
+    </script>
+
+</body>
+</html>
