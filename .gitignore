@@ -1,9 +1,5 @@
 # Gitignore for BMIS 263 Course Repository
 
-# Ignore assignment solutions
-**/assignments/solution.md
-**/solution.md
-
 # System & OS Files
 .DS_Store
 Thumbs.db
@@ -19,6 +15,3 @@ Thumbs.db
 node_modules/
 dist/
 build/
-
-exam-questions.md
-practice-questions.md
